@@ -1,5 +1,5 @@
-2. Explain the following questions in your own words
-- What is the difference between some() and every()? Explain these using your own words.
+ Explain the following questions in your own words
+1. What is the difference between some() and every()? Explain these using your own words.
 =>
   Difference between some() and every():
 a. The `some()` and `every()` methods are used on arrays in JavaScript to check  the elements against a condition.
@@ -11,3 +11,37 @@ c. On the other hand, `every()` returns `true` only if all elements of the array
    It loops through each element of the array and checks if the condition is met for each element. 
    If an element does not meet the condition, it immediately returns "false". 
    It only returns "true" if all elements satisfy the condition.
+
+
+2- Explain the difference between the spread operator and the rest parameter in JavaScript.
+=>
+The spread operator is used to expand elements. It allows us to split an array or object into individual elements.
+
+*When used with an array, the spread operator expands the elements of an array into individual values. 
+*It can be used to create a new array or pass array elements as individual arguments to a function.
+
+const arr = [1, 2, 3];
+const newArr = [...arr]; // Creates a new array with the same elements
+console.log(newArr); // Output: [1, 2, 3]
+
+const sum = (a, b, c) => a + b + c;
+console.log(sum(...arr));
+
+Rest Parameter=> 
+a. The rest parameter is used to represent multiple function arguments or remaining elements in an array. It allows you to capture a varying number of arguments into a single array.
+
+b. When used as a function parameter, the rest parameter allows you to pass any number of arguments to a function. The arguments are automatically collected into an array.
+
+function sum(...numbers) {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+
+c. In array destructuring, the rest parameter allows you to collect the remaining elements of an array into a new array
+
+const [first, second, ...rest] = [1, 2, 3, 4, 5];
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+
+3. 
