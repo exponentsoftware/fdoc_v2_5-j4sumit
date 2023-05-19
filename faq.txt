@@ -62,7 +62,21 @@ syntax:-
 array.splice(start, deleteCount, item1, item2, ...)
 
 
+4. If you need to remove an object element from an array by its index, which method do you prefer to use: splice() or filter()? Explain.
 
+=>
+a. If i want to remove an object element from an array by its index, I will use the splice() method. because,
+  using splice() method, i know the index of the element and i want to remove it. 
+  It directly removes the element from the array at the specified index. 
+  This method modifies the original array itself.
+b. When we use filter() to remove elements based on a condition or specific criteria. 
+  It creates a new array by filtering out elements that do not meet the provided condition. 
+  This method does not modify the original array; it returns a new array with the filtered elements.
+
+* In the case of removing an object element by its index, splice() is more straightforward and efficient. 
+  It allows us to directly target and remove the element at the specific index. 
+  On the other hand, using filter() would require additional logic to check the index, 
+  making it less suitable and less efficient in this scenario.
 
 
 
