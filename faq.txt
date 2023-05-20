@@ -98,15 +98,3 @@ b. Undefined: In JavaScript, undefined is a value that represents an uninitializ
 In summary, null indicates the intentional absence of an object value, while undefined represents an uninitialized variable or undefined property.
 null is assigned explicitly, while undefined is the default value for uninitialized variables or undefined properties.
 They both indicate the absence of a meaningful value, but are used in different contexts in JavaScript.
-
-
-
-
-
-
-
-
-
-
-
-
