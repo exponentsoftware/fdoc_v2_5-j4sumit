@@ -2,6 +2,9 @@
       const ROCKETS_API_URL = 'https://api.spacexdata.com/v4/rockets'
       const PAYLOADS_API_URL = 'https://api.spacexdata.com/v4/payloads'
 
+      // - Fetch the data from the API and store the launches, rockets, and payloads information in separate arrays.
+
+
 // fetching launch API Data and store ing launches variable      
 // let launches = [];
 // const getLaunches = async () => {
@@ -31,3 +34,6 @@ const getPayloads = async () =>{
   console.log(payloadData);
 }
 console.log(getPayloads());
+
+
+// - Write a function to count the number of successful launches and unsuccessful launches.
