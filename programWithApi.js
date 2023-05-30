@@ -1,42 +1,33 @@
-const LAUNCHES_API_URL = 'https://api.spacexdata.com/v4/launches';
-const ROCKETS_API_URL = 'https://api.spacexdata.com/v4/rockets';
-const PAYLOADS_API_URL = 'https://api.spacexdata.com/v4/payloads';
+      const LAUNCHES_API_URL = 'https://api.spacexdata.com/v4/launches'
+      const ROCKETS_API_URL = 'https://api.spacexdata.com/v4/rockets'
+      const PAYLOADS_API_URL = 'https://api.spacexdata.com/v4/payloads'
 
-async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log('Error fetching data:', error);
-    return [];
-  }
+// fetching launch API Data and store ing launches variable      
+// let launches = [];
+// const getLaunches = async () => {
+//   let data = await fetch(LAUNCHES_API_URL);
+//   console.log("data is Fetched");
+//   let launchData = await data.json();
+//   launches = await launchData.map((d) => console.log(d));
+// };
+
+// getLaunches();
+// console.log(launches);
+
+// Fetching Rocket API data and store and in rocketData
+// const getRocket = async () =>{
+//   let data = await fetch(ROCKETS_API_URL);
+//   console.log("data is fetched");
+//   let rocketData = await data.json();
+//   console.log(rocketData);
+// };
+// console.log(getRocket());
+
+// Fetching datf from LAUNCHES_API_URL and stored in payLoadData
+const getPayloads = async () =>{
+  let data = await fetch(LAUNCHES_API_URL);
+  console.log("data is fetched");
+  let payloadData = await data.json();
+  console.log(payloadData);
 }
-
-fetchData(LAUNCHES_API_URL)
-  .then((launches) => {
-    const launchesArray = Array.isArray(launches) ? launches : [launches];
-    console.log('Launches:', launchesArray);
-  })
-  .catch((error) => {
-    console.log('Error fetching launches data:', error);
-  });
-
-fetchData(ROCKETS_API_URL)
-  .then((rockets) => {
-    const rocketsArray = Array.isArray(rockets) ? rockets : [rockets];
-    console.log('Rockets:', rocketsArray);
-  })
-  .catch((error) => {
-    console.log('Error fetching rockets data:', error);
-  });
-
-
-fetchData(PAYLOADS_API_URL)
-  .then((payloads) => {
-    const payloadsArray = Array.isArray(payloads) ? payloads : [payloads];
-    console.log('Payloads:', payloadsArray);
-  })
-  .catch((error) => {
-    console.log('Error fetching payloads data:', error);
-  });
+console.log(getPayloads());
