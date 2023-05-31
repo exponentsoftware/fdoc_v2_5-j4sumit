@@ -1,3 +1,4 @@
+// Write a function to count the number of successful launches and unsuccessful launches.
 const launchStatus = async () => {
   let successful = 0;
   let unsuccessful = 0;
@@ -5,7 +6,7 @@ const launchStatus = async () => {
   console.log("data is Fetching");
   let launchData = await data.json();
   console.log(launchData);
-    successful = launchData.filter((d) => d.success).length;
+  successful = launchData.filter((d) => d.success).length;
   unsuccessful = launchData.length - successful;
   console.log(successful, unsuccessful);
 };
